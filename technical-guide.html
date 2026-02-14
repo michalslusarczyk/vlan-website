@@ -3,11 +3,118 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Przewodnik techniczny</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="description" content="Przewodnik techniczny projektu VLAN Sp. z o.o. — mapa implementacji HTML, CSS i JS.">
+  <meta name="robots" content="noindex,nofollow">
+  <title>VLAN | Przewodnik techniczny</title>
+  <link rel="canonical" href="https://vlan.net.pl/technical-guide.html">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=20260214-6">
 </head>
-<body>
-  <h1>Przewodnik techniczny</h1>
-  <a href="index.html">Powrót do strony głównej</a>
+<body data-auth-page="panel" class="auth-panel-page">
+  <header>
+    <div class="header-inner">
+      <div class="header-left">
+        <a href="panel.html" class="logo-wrap" aria-label="Powrót do panelu">
+          <img src="images/logo-icon.svg" alt="VLAN — logo" class="logo">
+          <div class="logo-text">Przewodnik techniczny</div>
+        </a>
+      </div>
+      <div class="header-right">
+        <a class="header-action" href="panel.html" aria-label="Powrót do panelu">
+          <span>Panel</span>
+        </a>
+        <button id="logoutBtn" type="button" class="header-action" aria-label="Wyloguj">
+          <span>Wyloguj</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="auth-panel-main" style="display:flex;flex-direction:column;gap:14px;">
+    <section class="card auth-panel-card" aria-label="Opis dokumentu">
+      <h1 class="auth-panel-title">Przewodnik techniczny</h1>
+      <p class="muted auth-panel-subtitle">Dokument roboczy: co, gdzie i jak jest zaimplementowane w projekcie.</p>
+    </section>
+
+    <section class="subcards-grid" aria-label="Mapa plików">
+      <article class="subcard">
+        <div class="subcard__head">
+          <div>
+            <p class="subcard__eyebrow">HTML</p>
+            <h3 class="subcard__title">Struktura stron</h3>
+          </div>
+          <span class="subcard__badge">Core</span>
+        </div>
+        <ul class="subcard__list">
+          <li>index.html — strona główna (noc).</li>
+          <li>day.html — strona główna (dzień).</li>
+          <li>panel.html — panel po logowaniu Google.</li>
+          <li>subcard-templates.html — biblioteka podkart.</li>
+        </ul>
+      </article>
+
+      <article class="subcard subcard--accent">
+        <div class="subcard__head">
+          <div>
+            <p class="subcard__eyebrow">JS</p>
+            <h3 class="subcard__title">Logika aplikacji</h3>
+          </div>
+          <span class="subcard__badge">Flow</span>
+        </div>
+        <ul class="subcard__list">
+          <li>script.js — sekcje dynamiczne, popupy, karty, sklep, kontakt.</li>
+          <li>auth.js — logowanie Google i ochrona widoków panelowych.</li>
+          <li>language.js — przełączanie języka PL/EN.</li>
+          <li>auth-config.js — konfiguracja Google Client ID.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="subcards-grid" aria-label="Style i motywy">
+      <article class="subcard subcard--soft">
+        <div class="subcard__head">
+          <div>
+            <p class="subcard__eyebrow">CSS</p>
+            <h3 class="subcard__title">Style bazowe i komponentowe</h3>
+          </div>
+        </div>
+        <ul class="subcard__list">
+          <li>style.css — design system, sekcje, karty, podkarty, panel.</li>
+          <li>style-day.css — nadpisania dla trybu jasnego.</li>
+          <li>Podkarty: subcard + warianty base/accent/kpi/compact/horizontal.</li>
+        </ul>
+      </article>
+
+      <article class="subcard subcard--kpi">
+        <div class="subcard__head">
+          <div>
+            <p class="subcard__eyebrow">ROZWÓJ</p>
+            <h3 class="subcard__title">Jak dodawać nowe moduły</h3>
+          </div>
+          <span class="subcard__badge">Guide</span>
+        </div>
+        <ol class="subcard__list">
+          <li>Wybierz model podkarty z subcard-templates.html.</li>
+          <li>Dodaj markup sekcji w odpowiednim pliku HTML.</li>
+          <li>W razie potrzeby dopisz logikę do script.js.</li>
+          <li>Sprawdź tryb nocny i dzienny przed publikacją.</li>
+        </ol>
+      </article>
+    </section>
+
+    <section class="card" aria-label="Notatki wdrożeniowe" style="padding:16px;">
+      <h3 style="margin:0 0 10px;">Notatki wdrożeniowe</h3>
+      <p class="muted" style="margin:0;line-height:1.6;">To jest dokument techniczny do bieżącej rozbudowy projektu. Możesz dopisywać tutaj kolejne sekcje z decyzjami architektonicznymi, konwencjami nazewnictwa i checklistami wdrożenia.</p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2026 VLAN Sp. z o.o.
+  </footer>
+
+  <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-auth-compat.js"></script>
+  <script src="auth-config.js?v=20260214-1"></script>
+  <script src="auth.js?v=20260214-1"></script>
 </body>
 </html>

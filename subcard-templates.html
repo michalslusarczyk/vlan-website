@@ -3,11 +3,94 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Szablony subkart</title>
-  <link rel="stylesheet" href="style.css">
+  <title>VLAN | Szablony podkart</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=20260214-6">
 </head>
 <body>
-  <h1>Szablony subkart</h1>
-  <a href="index.html">Powrót do strony głównej</a>
+  <main style="max-width:980px;margin:24px auto;padding:0 20px;display:flex;flex-direction:column;gap:18px;">
+    <h1 class="section-title" style="text-align:left;margin:0;">Szablony podkart (modele CSS)</h1>
+
+    <section class="subcards-grid" aria-label="Podkarty podstawowe">
+      <article class="subcard">
+        <div class="subcard__head">
+          <div>
+            <p class="subcard__eyebrow">MODEL / BASE</p>
+            <h3 class="subcard__title">Podkarta informacyjna</h3>
+          </div>
+          <span class="subcard__badge">Nowe</span>
+        </div>
+        <p class="subcard__text">Najprostszy model podkarty do sekcji ofertowych, opisów zakresu i podsumowań.</p>
+        <div class="subcard__actions">
+          <a href="#" class="subcard__link">Szczegóły</a>
+        </div>
+      </article>
+
+      <article class="subcard subcard--accent">
+        <div class="subcard__head">
+          <div>
+            <p class="subcard__eyebrow">MODEL / ACCENT</p>
+            <h3 class="subcard__title">Podkarta wyróżniona</h3>
+          </div>
+          <span class="subcard__badge">Polecane</span>
+        </div>
+        <p class="subcard__text">Wariant pod główne oferty lub kluczowe elementy strony produktowej.</p>
+        <div class="subcard__actions">
+          <a href="#" class="subcard__link">Przejdź</a>
+        </div>
+      </article>
+
+      <article class="subcard subcard--kpi">
+        <div class="subcard__head">
+          <div>
+            <p class="subcard__eyebrow">MODEL / KPI</p>
+            <h3 class="subcard__title">Podkarta licznikowa</h3>
+          </div>
+        </div>
+        <div class="subcard__kpi">
+          <span class="subcard__kpi-value">98%</span>
+          <span class="subcard__kpi-label">Skuteczność realizacji SLA</span>
+        </div>
+      </article>
+
+      <article class="subcard subcard--soft">
+        <div class="subcard__head">
+          <div>
+            <p class="subcard__eyebrow">MODEL / LIST</p>
+            <h3 class="subcard__title">Podkarta listowa</h3>
+          </div>
+        </div>
+        <ul class="subcard__list">
+          <li>Zakres 1: analiza i audyt</li>
+          <li>Zakres 2: wdrożenie</li>
+          <li>Zakres 3: utrzymanie</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="subcards-grid" aria-label="Podkarty układowe">
+      <article class="subcard subcard--compact">
+        <div class="subcard__head">
+          <div>
+            <p class="subcard__eyebrow">MODEL / COMPACT</p>
+            <h3 class="subcard__title">Podkarta kompaktowa</h3>
+          </div>
+        </div>
+        <p class="subcard__text">Do ciasnych layoutów i list podsekcji.</p>
+      </article>
+
+      <article class="subcard subcard--horizontal">
+        <div>
+          <p class="subcard__eyebrow">MODEL / HORIZONTAL</p>
+          <h3 class="subcard__title">Podkarta horyzontalna</h3>
+          <p class="subcard__text">Wariant do porównań i podsumowań z akcją po prawej.</p>
+        </div>
+        <span class="subcard__badge">v1</span>
+        <div class="subcard__actions">
+          <a href="#" class="subcard__link">Użyj wzoru</a>
+        </div>
+      </article>
+    </section>
+  </main>
 </body>
 </html>

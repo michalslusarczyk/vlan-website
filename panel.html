@@ -3,12 +3,281 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Panel logowania</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="description" content="Panel użytkownika VLAN Sp. z o.o. — szybki dostęp do modułów i dokumentacji technicznej po zalogowaniu.">
+  <meta name="robots" content="noindex,nofollow">
+  <title>VLAN Sp. z o.o. | Panel</title>
+  <link rel="canonical" href="https://vlan.net.pl/panel.html">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=20260214-5">
 </head>
-<body>
-  <h1>Panel logowania</h1>
-  <!-- Tutaj umieść formularz logowania lub skrypt panelu -->
-  <a href="index.html">Powrót do strony głównej</a>
+<body data-auth-page="panel" class="auth-panel-page">
+  <header>
+    <div class="header-inner">
+      <div class="header-left">
+        <a href="index.html" class="logo-wrap" aria-label="VLAN Sp. z o.o.">
+          <img src="images/logo-icon.svg" alt="VLAN — logo" class="logo">
+          <div class="logo-text">VLAN Sp. z o.o.</div>
+        </a>
+      </div>
+      <div class="header-right">
+        <a class="header-action" href="index.html" aria-label="Powrót na stronę główną">
+          <span>Strona główna</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="auth-panel-main">
+<<<<<<< HEAD
+    <section class="card auth-panel-card" aria-label="Testowe okno debug" style="background:#ffe6e6; border:2px dashed #d00; margin-bottom:18px;">
+      <h2 style="color:#d00;">Testowe okno debug</h2>
+      <p style="color:#333;">To jest testowa sekcja. Jeśli ją widzisz, zmiany w panelu są aktualne.</p>
+    </section>
+
+=======
+>>>>>>> 61590f0fc01ef09a08b491b5c5d9e95b0cb7c680
+    <section class="card auth-panel-card" aria-label="Dane zalogowanego użytkownika">
+      <h1 class="auth-panel-title">Panel użytkownika</h1>
+      <p class="muted auth-panel-subtitle">Dostęp do tej strony wymaga logowania kontem Google.</p>
+
+      <div class="auth-user-box">
+        <img id="authUserAvatar" class="auth-user-avatar" src="images/logo-icon.svg" alt="Avatar użytkownika">
+        <div class="auth-user-meta">
+          <strong id="authUserName">Użytkownik Google</strong>
+          <span id="authUserEmail" class="muted">Brak adresu e-mail</span>
+        </div>
+      </div>
+
+      <div class="auth-panel-actions">
+        <button id="logoutBtn" type="button" class="header-action">Wyloguj</button>
+      </div>
+    </section>
+
+<<<<<<< HEAD
+    <section id="panelModuleGeneral" class="services-subcards" aria-label="Modele podkart w panelu" style="margin-top:18px;">
+=======
+    <section class="services-subcards" aria-label="Modele podkart w panelu" style="margin-top:18px;">
+>>>>>>> 61590f0fc01ef09a08b491b5c5d9e95b0cb7c680
+      <div class="subcards-grid">
+        <article class="subcard">
+          <div class="subcard__head">
+            <div>
+              <p class="subcard__eyebrow">MODEL / BASE</p>
+              <h3 class="subcard__title">Szablon modułu panelu</h3>
+            </div>
+            <span class="subcard__badge">Aktywny</span>
+          </div>
+          <p class="subcard__text">Użyj tej podkarty jako start dla kolejnych sekcji panelu użytkownika.</p>
+          <div class="subcard__actions">
+            <a href="subcard-templates.html" class="subcard__link">Biblioteka szablonów</a>
+          </div>
+        </article>
+
+        <article class="subcard subcard--accent subcard--kpi">
+          <div class="subcard__head">
+            <div>
+              <p class="subcard__eyebrow">MODEL / KPI</p>
+              <h3 class="subcard__title">Podkarta statystyk</h3>
+            </div>
+            <span class="subcard__badge">Polecane</span>
+          </div>
+          <div class="subcard__kpi">
+            <span class="subcard__kpi-value">+5</span>
+            <span class="subcard__kpi-label">Gotowych wariantów do użycia</span>
+          </div>
+        </article>
+
+        <article class="subcard subcard--soft">
+          <div class="subcard__head">
+            <div>
+              <p class="subcard__eyebrow">DOKUMENTACJA</p>
+              <h3 class="subcard__title">Przewodnik techniczny wdrożenia</h3>
+            </div>
+            <span class="subcard__badge">Docs</span>
+          </div>
+          <p class="subcard__text">Otwórz dokument z mapą implementacji: gdzie są funkcje, style i jak rozwijać kolejne moduły.</p>
+          <div class="subcard__actions">
+            <a href="technical-guide.html" class="subcard__link">Otwórz dokument</a>
+          </div>
+        </article>
+<<<<<<< HEAD
+
+        <article class="subcard">
+          <div class="subcard__head">
+            <div>
+              <p class="subcard__eyebrow">V1 / API</p>
+              <h3 class="subcard__title">Test modułów backend</h3>
+            </div>
+            <span class="subcard__badge">Start</span>
+          </div>
+          <p id="v1ApiStatus" class="subcard__text">Sprawdź kontrakty i Odbiorczą dla nowego API V1.</p>
+          <div class="subcard__actions">
+            <button id="v1FetchContracts" type="button" class="subcard__link">Pobierz kontrakty V1</button>
+            <button id="v1FetchInbox" type="button" class="subcard__link">Pobierz Odbiorczą V1</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="panelModuleRoleTest" class="services-subcards" aria-label="Role testowe" style="margin-top:18px;">
+      <div class="card auth-panel-card">
+        <h2 class="auth-panel-title">Role testowe</h2>
+        <p class="muted auth-panel-subtitle">Przełącz podgląd panelu jak dla wybranej roli użytkownika.</p>
+        <div class="v1-actions">
+          <button type="button" class="subcard__link" data-test-role="SUPERADMIN">SUPERADMIN</button>
+          <button type="button" class="subcard__link" data-test-role="ADMIN">ADMIN</button>
+          <button type="button" class="subcard__link" data-test-role="USER">USER</button>
+          <button type="button" class="subcard__link" data-test-role="SERVICE">SERVICE</button>
+          <button type="button" class="subcard__link" data-test-role="READ">READ</button>
+          <button type="button" class="subcard__link" data-test-role="PROVIDER_OK">PROVIDER_OK</button>
+          <button type="button" class="subcard__link" data-test-role="NONE">NONE</button>
+        </div>
+        <div class="v1-actions">
+          <button id="testRoleReset" type="button" class="subcard__link">Powróć do SUPERADMINA</button>
+        </div>
+        <p id="testRoleStatus" class="muted">Tryb podglądu: SUPERADMIN</p>
+      </div>
+    </section>
+
+    <section id="panelModuleTickets" class="services-subcards" aria-label="Obsługa zgłoszeń V1" style="margin-top:18px;">
+      <div class="card auth-panel-card">
+        <h2 class="auth-panel-title">Obsługa Zgłoszeń V1</h2>
+        <p class="muted auth-panel-subtitle">Foldery, szczegół zgłoszenia i akcje operacyjne zgodne z roadmapą V1.</p>
+
+        <div class="v1-toolbar" role="toolbar" aria-label="Foldery zgłoszeń">
+          <button type="button" class="subcard__link" data-v1-folder="inbox">Odbiorcza</button>
+          <button type="button" class="subcard__link" data-v1-folder="archive">Archiwum</button>
+          <button type="button" class="subcard__link" data-v1-folder="sent">Nadawcza</button>
+          <button type="button" class="subcard__link" data-v1-folder="trash">Kosz</button>
+          <button type="button" class="subcard__link" data-v1-folder="postponed">Odłożone</button>
+          <button id="v1RefreshEmails" type="button" class="subcard__link">Odśwież</button>
+        </div>
+
+        <div class="v1-grid">
+          <article class="v1-pane">
+            <h3>Lista zgłoszeń</h3>
+            <p id="v1FolderLabel" class="muted">Folder: Odbiorcza</p>
+            <ul id="v1EmailList" class="v1-list" aria-label="Lista zgłoszeń"></ul>
+          </article>
+
+          <article class="v1-pane">
+            <h3>Szczegół i akcje</h3>
+            <p id="v1SelectedMeta" class="muted">Wybierz zgłoszenie z listy.</p>
+            <textarea id="v1SelectedBody" class="v1-textarea" rows="8" readonly></textarea>
+
+            <div class="v1-actions">
+              <button id="v1ActionArchive" type="button" class="subcard__link">Archiwizuj</button>
+              <button id="v1ActionTrash" type="button" class="subcard__link">Przenieś do kosza</button>
+              <button id="v1ActionRestore" type="button" class="subcard__link">Przywróć</button>
+              <button id="v1ActionForwardService" type="button" class="subcard__link">Przekaż do serwisu</button>
+              <button id="v1ActionAutomation" type="button" class="subcard__link">Automatyka OPL</button>
+            </div>
+
+            <div class="v1-postpone-row">
+              <input id="v1PostponeUntil" type="datetime-local" class="v1-input" />
+              <button id="v1ActionPostpone" type="button" class="subcard__link">Odłóż</button>
+            </div>
+          </article>
+        </div>
+
+        <div class="v1-grid" style="margin-top:10px;">
+          <article class="v1-pane">
+            <h3>Nowe zgłoszenie (V1)</h3>
+            <input id="v1NewSubject" class="v1-input" type="text" placeholder="Temat zgłoszenia" />
+            <input id="v1NewSender" class="v1-input" type="email" placeholder="Nadawca (email)" />
+            <input id="v1NewZg" class="v1-input" type="text" placeholder="Numer ZG, np. ZG/OPL/2026/02/123" />
+            <textarea id="v1NewBody" class="v1-textarea" rows="5" placeholder="Treść zgłoszenia"></textarea>
+            <button id="v1CreateEmail" type="button" class="subcard__link">Utwórz zgłoszenie</button>
+          </article>
+
+          <article class="v1-pane">
+            <h3>Kolejka Serwis (V1)</h3>
+            <div class="v1-actions">
+              <button id="v1RefreshServiceTasks" type="button" class="subcard__link">Odśwież kolejkę</button>
+              <button type="button" class="subcard__link" data-v1-service-filter="ALL">Wszystkie</button>
+              <button type="button" class="subcard__link" data-v1-service-filter="NEW">NEW</button>
+              <button type="button" class="subcard__link" data-v1-service-filter="IN_PROGRESS">IN_PROGRESS</button>
+              <button type="button" class="subcard__link" data-v1-service-filter="DONE">DONE</button>
+            </div>
+            <ul id="v1ServiceTasks" class="v1-list" aria-label="Kolejka zadań serwisowych"></ul>
+          </article>
+        </div>
+
+        <p id="v1OpsStatus" class="muted">Status: gotowe.</p>
+      </div>
+    </section>
+
+    <section id="panelModuleAdmin" class="services-subcards" aria-label="Ustawienia administracyjne" style="margin-top:18px;">
+      <div class="card auth-panel-card">
+        <h2 class="auth-panel-title">Ustawienia administracyjne</h2>
+        <p class="muted auth-panel-subtitle">Nadawanie ról i uprawnień użytkownikom panelu.</p>
+
+        <div class="v1-grid">
+          <article class="v1-pane">
+            <h3>Edycja użytkownika</h3>
+            <input id="adminUserEmail" class="v1-input" type="email" placeholder="Email użytkownika" />
+            <select id="adminUserRole" class="v1-input">
+              <option value="SUPERADMIN">SUPERADMIN</option>
+              <option value="ADMIN">ADMIN</option>
+              <option value="USER">USER</option>
+              <option value="SERVICE">SERVICE</option>
+              <option value="READ">READ</option>
+              <option value="PROVIDER_OK">PROVIDER_OK</option>
+              <option value="NONE">NONE</option>
+            </select>
+
+            <div class="v1-actions admin-perm-grid">
+              <label><input id="permTickets" type="checkbox" checked> Zgłoszenia</label>
+              <label><input id="permService" type="checkbox"> Serwis</label>
+              <label><input id="permActivations" type="checkbox"> Aktywacje</label>
+              <label><input id="permPanelOk" type="checkbox"> Panel OK</label>
+              <label><input id="permOffice" type="checkbox"> Biuro</label>
+              <label><input id="permAdmin" type="checkbox"> Admin</label>
+            </div>
+
+            <div class="v1-actions">
+              <button id="adminSaveAccess" type="button" class="subcard__link">Zapisz rolę i uprawnienia</button>
+              <button id="adminClearForm" type="button" class="subcard__link">Wyczyść formularz</button>
+            </div>
+          </article>
+
+          <article class="v1-pane">
+            <h3>Lista uprawnień</h3>
+            <div class="v1-actions">
+              <button id="adminRefreshUsers" type="button" class="subcard__link">Odśwież listę</button>
+            </div>
+            <ul id="adminUsersList" class="v1-list" aria-label="Lista użytkowników i uprawnień"></ul>
+          </article>
+        </div>
+
+        <p id="adminOpsStatus" class="muted">Status admin: gotowe.</p>
+=======
+>>>>>>> 61590f0fc01ef09a08b491b5c5d9e95b0cb7c680
+      </div>
+    </section>
+  </main>
+
+  <footer>
+<<<<<<< HEAD
+
+    <section id="panelDebugLog" class="card auth-panel-card" style="margin-top:24px; background:#f9f9f9; border:1px solid #ccc;">
+      <h2 style="font-size:1.1em; color:#444;">Logi debugowania</h2>
+      <pre id="debugLogOutput" style="font-size:0.95em; color:#222; min-height:40px; max-height:180px; overflow:auto; background:#fff; border:1px solid #eee; padding:8px;"></pre>
+    </section>
+
+  <footer>
+=======
+>>>>>>> 61590f0fc01ef09a08b491b5c5d9e95b0cb7c680
+    &copy; 2026 VLAN Sp. z o.o.
+  </footer>
+
+  <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-auth-compat.js"></script>
+  <script src="auth-config.js?v=20260214-1"></script>
+  <script src="auth.js?v=20260214-1"></script>
+<<<<<<< HEAD
+  <script src="panel-v1.js?v=20260214-1"></script>
+=======
+>>>>>>> 61590f0fc01ef09a08b491b5c5d9e95b0cb7c680
 </body>
 </html>

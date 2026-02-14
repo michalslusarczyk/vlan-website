@@ -1,13 +1,400 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="pl" class="day-theme">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Widok dnia</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="VLAN Sp. z o.o. — projektowanie i wdrożenia FTTH, audyty sieciowe, automatyzacja, administracja i wsparcie infrastruktury IT.">
+    <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+    <title>VLAN Sp. z o.o. | Tryb dzienny</title>
+  <link rel="icon" type="image/png" href="image-300x48.png">
+    <link rel="canonical" href="https://vlan.net.pl/day.html">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pl_PL">
+    <meta property="og:title" content="VLAN Sp. z o.o. | Tryb dzienny">
+    <meta property="og:description" content="Projektowanie i wdrożenia FTTH, audyty sieciowe, automatyzacja oraz wsparcie infrastruktury IT.">
+    <meta property="og:url" content="https://vlan.net.pl/day.html">
+    <meta property="og:image" content="https://vlan.net.pl/image-300x48.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="VLAN Sp. z o.o. | Tryb dzienny">
+    <meta name="twitter:description" content="Projektowanie i wdrożenia FTTH, audyty sieciowe, automatyzacja oraz wsparcie infrastruktury IT.">
+    <meta name="twitter:image" content="https://vlan.net.pl/image-300x48.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome (ikony) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- External stylesheet (gray theme + shop styles) -->
+    <link rel="stylesheet" href="style.css?v=20260214-4">
+    <link rel="stylesheet" href="style-day.css?v=20260213-6">
 </head>
 <body>
-  <h1>Widok dnia</h1>
-  <a href="index.html">Powrót do strony głównej</a>
+
+    <!-- Header -->
+    <header>
+        <div class="header-inner">
+          <div class="header-left">
+            <div class="header-left-top">
+              <button class="menu-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="headerDrawerMenu">
+                <img src="images/social/menu-lines.svg?v=20260214-2" alt="Menu" class="menu-lines-icon" loading="lazy">
+              </button>
+              <a href="/" class="logo-wrap" aria-label="VLAN Sp. z o.o.">
+                <img src="images/logo-icon.svg" alt="VLAN — logo" class="logo">
+                <div class="logo-text">VLAN Sp. z o.o.</div>
+              </a>
+            </div>
+            <nav id="headerDrawerMenu" class="header-drawer-menu" aria-label="Menu sekcji">
+              <a href="#about"><span class="drawer-icon-wrap" aria-hidden="true"><svg class="drawer-icon" viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.2"></circle><path d="M5.5 19.2c1.7-2.7 4.1-4 6.5-4s4.8 1.3 6.5 4"></path></svg></span><span>O mnie</span></a>
+              <a href="#about-company"><span class="drawer-icon-wrap" aria-hidden="true"><svg class="drawer-icon" viewBox="0 0 24 24"><path d="M4.8 20.2V6.2h10.4v14"></path><path d="M9.9 20.2v-3.5h2.8v3.5"></path><path d="M7.2 8.9h1.6M10 8.9h1.6M7.2 11.7h1.6M10 11.7h1.6"></path><path d="M15.2 20.2V10.4h4v9.8"></path></svg></span><span>O firmie</span></a>
+              <a href="#contact"><span class="drawer-icon-wrap" aria-hidden="true"><svg class="drawer-icon" viewBox="0 0 24 24"><rect x="4.2" y="6.2" width="15.6" height="11.6" rx="1.8"></rect><path d="M5.4 7.4 12 12.2l6.6-4.8"></path></svg></span><span>Kontakt</span></a>
+              <a href="#shop"><span class="drawer-icon-wrap" aria-hidden="true"><svg class="drawer-icon" viewBox="0 0 24 24"><path d="M6.2 8.2h11.6l-1 10H7.2z"></path><path d="M9 8.2a3 3 0 1 1 6 0"></path></svg></span><span>Sklep</span></a>
+            </nav>
+          </div>
+
+          <div class="header-right">
+            <label class="header-search" aria-label="Szukaj">
+              <input type="search" placeholder="" />
+            </label>
+            <button class="header-action header-search-btn" type="button" aria-label="Szukaj">
+              <span>Szukaj</span>
+            </button>
+            <button id="langToggleBtn" class="header-action lang-toggle-btn" type="button" aria-label="ENG — przełącz język na angielski" title="ENG — przełącz na angielski">ENG</button>
+            <span class="header-right-gap" aria-hidden="true"></span>
+            <button id="loginBtn" class="header-action" type="button" aria-label="Zaloguj">
+              <i class="fas fa-user" aria-hidden="true"></i>
+              <span>Zaloguj</span>
+            </button>
+            <a class="header-action night-mode-btn" href="index.html" aria-label="Wersja nocna" title="Przełącz na tryb nocny">
+              <svg class="night-mode-glyph" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path class="moon-crescent" fill-rule="evenodd" d="M9.1 7.2a3.3 3.3 0 1 1-6.6 0a3.3 3.3 0 1 1 6.6 0ZM10 7.2a2.8 2.8 0 1 0-5.6 0a2.8 2.8 0 1 0 5.6 0Z"></path>
+                <path d="M14.2 21V14.5L18.8 11L23 14.5V21"></path>
+                <path d="M13.4 21H23.2"></path>
+                <path d="M18 21V17.5H19.5V21"></path>
+              </svg>
+            </a>
+
+          </div>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <p class="hero-intro-spacer" aria-hidden="true">&nbsp;</p>
+
+    </section>
+
+    <!-- Services -->
+    <section id="services">
+      <div class="services-layout">
+        <div class="services-left">
+        <button id="openServicesPopup" class="section-title services-open-btn" type="button">Zakres usług</button>
+        <div class="services">
+          <div class="card">
+            <h3>Projektowanie i wdrożenia FTTH</h3>
+            <p class="muted">Koncepcja, dokumentacja, budowa i uruchomienie sieci FTTH — od przyłącza po OLT. Optymalizacja kosztów i nadzór wykonawczy.</p>
+          </div>
+          <div class="card">
+            <h3>Audyty i konsultacje</h3>
+            <p class="muted">Audyt sieciowy z rekomendacjami technicznymi i kosztorysami. Raporty gotowe do wdrożenia lub negocjacji z wykonawcami.</p>
+          </div>
+          <div class="card">
+            <h3>Administracja i utrzymanie</h3>
+            <p class="muted">Monitoring, wsparcie operacyjne, utrzymanie OLT/switchy, zarządzanie SLA, backupy i migracje systemów.</p>
+          </div>
+          <div class="card">
+            <h3>Tworzenie aplikacji i stron</h3>
+            <p class="muted">Projektowanie i wdrożenie aplikacji webowych oraz stron firmowych — frontend, backend, wdrożenie i hosting.</p>
+          </div>
+          <div class="card">
+            <h3>Automatyzacja procesów pracy</h3>
+            <p class="muted">Automatyzacja przepływów pracy: skrypty, integracje, aplikacje mobilne i systemy wspierające operacje terenowe.</p>
+          </div>
+          <div class="card">
+            <h3>Bezpieczeństwo i sieci routowane</h3>
+            <p class="muted">VPN, VLAN, BGP, OSPF, QoS oraz hardening urządzeń sieciowych i konfiguracje zabezpieczające.</p>
+          </div>
+        </div>
+        </div>
+
+        <aside class="card services-right-placeholder" aria-live="polite">
+        <div class="news-top-row">
+        <button id="dailyNewsRefresh" class="btn-primary news-refresh-btn" type="button">Poszukaj innych innowacji ze świata</button>
+        <input id="dailyNewsSourceRaw" class="news-source-input" type="text" readonly value="" placeholder="Link do źródła" aria-label="Link do źródła" />
+        </div>
+        <a id="dailyNewsTitle" class="news-link" href="#" target="_blank" rel="noopener noreferrer">Ładowanie nowinki technicznej...</a>
+        <p id="dailyNewsSummary" class="muted">Pobieram losową wiadomość ze świata technologii.</p>
+        <p id="dailyNewsMeta" class="small">Aktualizacja: raz na dzień</p>
+        </aside>
+        </div>
+
+        <div class="services-extra">
+          <article class="card extra-card">
+            <h3>Oferta — przykładowe pakiety</h3>
+            <ul class="offer-list">
+              <li><strong>Konsultacja & Audyt</strong> — raport z rekomendacjami i planem działań.</li>
+              <li><strong>Projekt & Wdrożenie FTTH</strong> — od koncepcji do uruchomienia.</li>
+              <li><strong>Tworzenie aplikacji i stron</strong> — projekt frontend/backend, wdrożenie i hosting.</li>
+              <li><strong>Managed Services</strong> — monitoring, wsparcie i utrzymanie infrastruktury.</li>
+              <li><strong>Automatyzacja procesów</strong> — integracje, skrypty i aplikacje usprawniające pracę zespołów.</li>
+            </ul>
+          </article>
+
+          <article class="card extra-card">
+            <h3>Umiejętności</h3>
+            <div class="skill-list">
+              <span class="skill-badge">FTTH</span>
+              <span class="skill-badge">OLT Huawei</span>
+              <span class="skill-badge">MikroTik</span>
+              <span class="skill-badge">BGP / OSPF</span>
+              <span class="skill-badge">VLAN / VPN</span>
+              <span class="skill-badge">LibreNMS</span>
+              <span class="skill-badge">Proxmox / Synology</span>
+              <span class="skill-badge">Android / Firebase</span>
+              <span class="skill-badge">Automatyzacja</span>
+              <span class="skill-badge">Tworzenie stron</span>
+              <span class="skill-badge">Front‑end / Full‑stack</span>
+              <span class="skill-badge">DevOps sieciowy</span>
+            </div>
+          </article>
+        </div>
+
+        <div class="services-subcards" aria-label="Modele podkart">
+          <div class="subcards-grid">
+            <article class="subcard">
+              <div class="subcard__head">
+                <div>
+                  <p class="subcard__eyebrow">MODEL / BASE</p>
+                  <h3 class="subcard__title">Podkarta informacyjna</h3>
+                </div>
+                <span class="subcard__badge">Nowe</span>
+              </div>
+              <p class="subcard__text">Bazowy szablon do podstron usług, case studies i opisów modułów.</p>
+              <div class="subcard__actions">
+                <a href="subcard-templates.html" class="subcard__link">Zobacz szablony</a>
+              </div>
+            </article>
+
+            <article class="subcard subcard--accent">
+              <div class="subcard__head">
+                <div>
+                  <p class="subcard__eyebrow">MODEL / KPI</p>
+                  <h3 class="subcard__title">Podkarta wyników</h3>
+                </div>
+                <span class="subcard__badge">Polecane</span>
+              </div>
+              <div class="subcard__kpi">
+                <span class="subcard__kpi-value">+5</span>
+                <span class="subcard__kpi-label">Gotowych wariantów do kolejnych stron</span>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="services-popup-overlay" id="servicesPopup" aria-hidden="true">
+          <div class="services-popup" role="dialog" aria-modal="true" aria-labelledby="servicesPopupTitle">
+            <div class="services-popup-head">
+              <h3 id="servicesPopupTitle">Zakres usług — pełna lista</h3>
+              <button id="closeServicesPopup" class="services-popup-close" type="button" aria-label="Zamknij">&times;</button>
+            </div>
+            <div class="services-popup-grid" id="servicesPopupGrid"></div>
+          </div>
+        </div>
+    </section>
+
+        <!-- Shop -->
+        <section id="shop">
+            <h2 class="section-title"><!-- Sklep --></h2>
+          <div class="shop-disclaimer-row">
+            <p class="price-disclaimer">*Niniejsze ceny mają charakter orientacyjny i nie stanowią oferty handlowej w rozumieniu art. 66 § 1 Kodeksu cywilnego. Ostateczna wycena zależy od zakresu prac. Ceny mogą ulec aktualizacji.</p>
+          <div class="shop-toolbar">
+              <button id="openShopWindow" class="shop-open-cta" type="button">
+                <i class="fas fa-up-right-from-square" aria-hidden="true"></i>
+                Otwórz wszystkie pozycje w nowym oknie
+              </button>
+          </div>
+          </div>
+            <div class="products" id="products">
+                <!-- Produkty wczytywane dynamicznie przez script.js -->
+            </div>
+        </section>
+
+    <!-- Contact -->
+    <section id="contact">
+        <h2 class="section-title"><!-- Kontakt --></h2>
+        <!-- Contact form + Messenger panel -->
+        <div style="max-width:980px;margin:20px auto 0;">
+          <div class="contact-interactive">
+          <form id="contactForm" class="card" novalidate>
+            <label for="cf-name">Imię i nazwisko</label>
+            <input id="cf-name" name="name" type="text" required placeholder="Twoje imię" />
+
+            <label for="cf-email">Email</label>
+            <input id="cf-email" name="email" type="email" required placeholder="twoj@adres.pl" />
+
+            <label for="cf-message">Wiadomość</label>
+            <textarea id="cf-message" name="message" rows="4" required placeholder="Opisz krótko jakie wsparcie potrzebujesz"></textarea>
+
+            <div style="display:flex;gap:12px;margin-top:12px;align-items:center;">
+              <button class="btn-primary" id="contactSubmit" type="submit">Wyślij wiadomość</button>
+              <div id="contactStatus" class="small muted" aria-live="polite"></div>
+            </div>
+            <p class="small muted" style="margin-top:12px">Wiadomość zostanie przesłana do VLAN Sp. z o.o. — odpowiem wkrótce. Formularz korzysta z lokalnego demo; skonfiguruj serwer / webhook w /api/contact aby odbierać wiadomości.</p>
+          </form>
+
+          <aside class="card messenger-panel" aria-label="Komunikator Messenger">
+            <div class="messenger-top">
+              <span class="messenger-badge"><i class="fab fa-facebook-messenger" aria-hidden="true"></i></span>
+              <div>
+                <strong>Messenger — szybki kontakt</strong>
+                <div class="small muted">Napisz bezpośrednio do mnie, odpowiadam na bieżąco.</div>
+              </div>
+            </div>
+
+            <div class="messenger-preview">
+              <div class="bubble bubble-me">Cześć! Chcesz wycenę lub konsultację?</div>
+              <div class="bubble bubble-user">Tak, poproszę o szybki kontakt 🙂</div>
+            </div>
+
+            <a class="btn-primary messenger-cta" href="https://m.me/michalls" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-facebook-messenger" aria-hidden="true"></i>
+              Napisz teraz na Messenger
+            </a>
+          </aside>
+          </div>
+
+          <div class="card" style="margin-top:12px;">
+            <div class="small muted" style="margin-bottom:8px;">Namiary bezpośrednie:</div>
+            <div class="social-links-row">
+              <div class="social-links social-links--compact social-group social-group-left">
+              <a class="social-link github-link" href="https://github.com/michalslusarczyk" target="_blank" rel="noopener noreferrer">
+                <span class="social-icon"><img src="images/social/github.svg" alt="GitHub" loading="lazy"></span>
+                <span class="social-meta">
+                  <strong>GitHub</strong>
+                  <span>/michalslusarczyk</span>
+                </span>
+              </a>
+              <a class="social-link linkedin-link" href="https://www.linkedin.com/in/michalls/" target="_blank" rel="noopener noreferrer">
+                <span class="social-icon"><img src="images/social/linkedin.png" alt="LinkedIn" loading="lazy"></span>
+                <span class="social-meta">
+                  <strong>LinkedIn</strong>
+                  <span>/michalls</span>
+                </span>
+              </a>
+              </div>
+              <div class="social-links social-links--compact social-group social-group-right">
+              <a class="social-link phone-link" href="tel:+48505686717">
+                <span class="social-icon"><img src="images/social/phone.svg" alt="Telefon" loading="lazy"></span>
+                <span class="social-meta">
+                  <strong>Telefon</strong>
+                  <span>+48 505 686 717</span>
+                </span>
+              </a>
+              <a class="social-link email-link" href="mailto:michal.slus@gmail.com">
+                <span class="social-icon"><img src="images/social/gmail.svg" alt="Gmail" loading="lazy"></span>
+                <span class="social-meta">
+                  <strong>Email</strong>
+                  <span>michal.slus@gmail.com</span>
+                </span>
+              </a>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <!-- Chat & Cart widgets -->
+    <div class="chat-widget" title="Napisz do mnie">
+      <a href="https://m.me/michalls" target="_blank" rel="noopener noreferrer" aria-label="Napisz na Messenger"><i class="fab fa-facebook-messenger"></i></a>
+    </div>
+
+    <button class="cart-button" id="cartButton" aria-label="Otwórz koszyk">
+        <i class="fas fa-shopping-cart"></i>
+        <span class="cart-count" id="cartCount">0</span>
+    </button>
+
+    <div class="cart-modal" id="cartModal" aria-hidden="true">
+        <div class="cart-content">
+            <button class="cart-close" id="closeCart">&times;</button>
+            <h3>Twój koszyk</h3>
+            <div id="cartItems"></div>
+            <div class="cart-actions">
+                <strong>Razem: <span id="cartTotal">0.00 zł</span></strong>
+                <div>
+                    <button id="clearCart" class="btn-secondary">Wyczyść</button>
+                    <button id="checkout" class="btn-primary">Przejdź do płatności</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About (moved to bottom) -->
+    <section id="about">
+        <div class="about-head">
+          <div class="about-title-wrap">
+            <h2 class="about-title"><!-- O mnie --></h2>
+            <div class="about-person-card" aria-label="Profil osobisty">
+              <img src="images/logo-icon.svg" alt="Michał" class="about-person-avatar" loading="lazy">
+              <div class="about-person-content">
+                <div class="about-person-name">Michał S.</div>
+                <div class="about-person-role">Senior Network & Infrastructure Engineer</div>
+              </div>
+            </div>
+          </div>
+          <div id="about-company" class="about-company-card">
+            <div class="about-company-meta" aria-label="Dane firmy">
+              <strong><!-- O firmie --></strong>
+              <div class="about-company-row">
+                <span>REGON: 389854344</span>
+                <span>NIP: 6812088258</span>
+              </div>
+              <div class="about-company-row about-company-row-address">
+                <span>Adres: Brzączowice 334,</span>
+                <span>32-410 Dobczyce</span>
+              </div>
+              <span class="about-account">Konto: 56 1050 1100 1000 0090 8136 6164</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-layout">
+          <div class="card about-card">
+            <p class="lead about-text">
+              Jestem inżynierem infrastruktury z wieloletnim doświadczeniem w projektowaniu, budowie i utrzymaniu sieci FTTH oraz systemów wspierających operacje sieciowe. Realizuję pełen cykl — od audytu i koncepcji, przez projekt i wdrożenie, do automatyzacji i bieżącego zarządzania. Tworzę narzędzia desktopowe i mobilne (Android), integruję monitoring, konfiguruję systemy serwerowe i sieciowe oraz prowadzę nadzór projektowy — zawsze z naciskiem na niezawodność i efektywność operacyjną.
+            </p>
+            <p class="lead small muted about-subtext">Główne obszary: projektowanie FTTH, konfiguracja OLT, automatyzacja procesów, monitoring, wsparcie operacyjne, migracje systemów i zarządzanie zespołami technicznymi.</p>
+          </div>
+          <div class="about-graphic-wrap">
+            <div class="card about-graphic" aria-hidden="true">
+              <img src="images/telecom-day.svg?v=20260214-8" alt="" loading="lazy">
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2026 VLAN Sp. z o.o.
+    </footer>
+
+    <div id="cookieConsentBanner" class="cookie-consent" role="dialog" aria-modal="true" aria-label="Informacja o ciasteczkach / Cookie notice" aria-hidden="true">
+      <div class="cookie-consent-text">
+        <p><strong>PL:</strong> Ta strona używa plików cookies niezbędnych do działania oraz zapisu preferencji. Wybierz, czy akceptujesz cookies tylko teraz, czy na stałe.</p>
+        <p><strong>EN:</strong> This website uses cookies necessary for operation and preference storage. Choose whether you accept cookies just once or permanently.</p>
+      </div>
+      <div class="cookie-consent-actions">
+        <button id="cookieAcceptOnce" type="button" class="cookie-btn cookie-btn-once">Akceptuję 1 raz / Accept once</button>
+        <button id="cookieAcceptPermanent" type="button" class="cookie-btn cookie-btn-permanent">Akceptuję na stałe / Accept permanently</button>
+      </div>
+    </div>
+
+    <!-- script moved to external file: script.js -->
+    <script src="script.js?v=20260213-9"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-auth-compat.js"></script>
+    <script src="auth-config.js?v=20260214-1"></script>
+    <script src="auth.js?v=20260214-1"></script>
+    <script src="language.js?v=20260214-2"></script>
 </body>
 </html>

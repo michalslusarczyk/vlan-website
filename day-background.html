@@ -1,1 +1,142 @@
-<!-- Placeholder for day-background.html -->
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VLAN | Wersja dzienna (podgląd UI)</title>
+  <style>
+    html,body{
+      width:100%;
+      height:100%;
+      margin:0;
+      background:#74c98a !important;
+      font-family:Roboto,Arial,sans-serif;
+    }
+
+    .bg-fill{
+      position:fixed;
+      inset:0;
+      background:#74c98a;
+      z-index:0;
+    }
+
+    .preview-wrap{
+      position:relative;
+      z-index:1;
+      max-width:980px;
+      margin:0 auto;
+      padding:20px;
+      display:flex;
+      flex-direction:column;
+      gap:16px;
+    }
+
+    .white-panel{
+      background:#ffffff;
+      border:1px solid rgba(0,0,0,0.08);
+      border-radius:12px;
+      box-shadow:0 8px 24px rgba(0,0,0,0.10);
+      padding:16px;
+      color:#111111;
+    }
+
+    .header-row{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+    }
+
+    .title{
+      margin:0;
+      font-size:1rem;
+      font-weight:700;
+      color:#111111;
+    }
+
+    .muted{
+      margin:6px 0 0;
+      color:#222222;
+      line-height:1.5;
+      font-size:.95rem;
+    }
+
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:12px;
+    }
+
+    .card{
+      background:#ffffff;
+      border:1px solid rgba(0,0,0,0.08);
+      border-radius:10px;
+      padding:14px;
+      color:#111111;
+    }
+
+    .btn-blue{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      height:34px;
+      padding:0 12px;
+      border:1px solid #1a7cff;
+      border-radius:8px;
+      background:linear-gradient(180deg,#0e6dd8,#0a63c7);
+      color:#f2f8ff;
+      text-decoration:none;
+      font-weight:600;
+      font-size:.88rem;
+    }
+
+    .actions{
+      display:flex;
+      gap:8px;
+      flex-wrap:wrap;
+      margin-top:10px;
+    }
+
+    @media (max-width:820px){
+      .cards{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-fill" aria-hidden="true"></div>
+  <main class="preview-wrap" aria-label="Podgląd dziennego UI">
+    <section class="white-panel">
+      <div class="header-row">
+        <h1 class="title">Podgląd: białe elementy + czarna czcionka + niebieskie przyciski</h1>
+        <a class="btn-blue" href="index.html">Powrót</a>
+      </div>
+      <p class="muted">Bazowe tło: #74c98a. Wszystkie elementy frontowe są białe, tekst czarny i przyciski w niebieskim stylu VLAN.</p>
+      <div class="actions">
+        <a class="btn-blue" href="#">Szukaj</a>
+        <a class="btn-blue" href="#">Wyślij</a>
+        <a class="btn-blue" href="#">Przejdź dalej</a>
+      </div>
+    </section>
+
+    <section class="cards" aria-label="Przykładowe karty">
+      <article class="card">
+        <h2 class="title">Karta 1</h2>
+        <p class="muted">Białe tło karty i ciemny tekst dla kontrastu na zielonym tle.</p>
+      </article>
+      <article class="card">
+        <h2 class="title">Karta 2</h2>
+        <p class="muted">Niebieskie CTA pozostaje spójne z aktualnym stylem przycisków strony.</p>
+      </article>
+      <article class="card">
+        <h2 class="title">Karta 3</h2>
+        <p class="muted">To baza pod późniejsze skopiowanie pełnego layoutu wersji dziennej.</p>
+      </article>
+    </section>
+  </main>
+  <script>
+    document.documentElement.style.backgroundColor = '#74c98a';
+    document.body.style.backgroundColor = '#74c98a';
+  </script>
+</body>
+</html>

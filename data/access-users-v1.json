@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1771069087991,
+    "email": "admin.bootstrap@vlan.local",
+    "role": "SUPERADMIN",
+    "permissions": {
+      "tickets": true,
+      "service": true,
+      "activations": true,
+      "panelOk": true,
+      "office": true,
+      "admin": true
+    },
+    "createdAt": "2026-02-14T11:38:07.991Z",
+    "updatedAt": "2026-02-14T11:38:07.991Z",
+    "updatedBy": "admin.bootstrap@vlan.local"
+  },
+  {
+    "id": 1771069088049,
+    "email": "serwis.technik@vlan.local",
+    "role": "SERVICE",
+    "permissions": {
+      "tickets": true,
+      "service": true,
+      "activations": false,
+      "panelOk": false,
+      "office": false,
+      "admin": false
+    },
+    "createdAt": "2026-02-14T11:38:08.049Z",
+    "updatedAt": "2026-02-14T11:38:08.049Z",
+    "updatedBy": "admin.bootstrap@vlan.local"
+  },
+  {
+    "id": 1771070400000,
+    "email": "michal.slus@gmail.com",
+    "role": "SUPERADMIN",
+    "permissions": {
+      "tickets": true,
+      "service": true,
+      "activations": true,
+      "panelOk": true,
+      "office": true,
+      "admin": true
+    },
+    "createdAt": "2026-02-14T12:00:00.000Z",
+    "updatedAt": "2026-02-14T12:00:00.000Z",
+    "updatedBy": "admin.bootstrap@vlan.local"
+  }
+]

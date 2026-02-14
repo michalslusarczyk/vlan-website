@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1771068842249,
+    "zgNumber": "ZG/OPL/2026/02/777",
+    "subject": "Service status",
+    "body": "ZG/OPL/2026/02/777",
+    "sender": "serwis@test.local",
+    "folder": "inbox",
+    "waitingStatus": "NORMAL",
+    "isDeleted": false,
+    "isClosed": false,
+    "postponedUntil": null,
+    "updatedAt": "2026-02-14T11:34:02.249Z"
+  },
+  {
+    "id": 1771068705206,
+    "zgNumber": "ZG/OPL/2026/02/991",
+    "subject": "Panel flow",
+    "body": "ZG/OPL/2026/02/991 [X] Wykonano naprawe zamknij zgloszenie |-> test <-|",
+    "sender": "panel@test.local",
+    "folder": "archive",
+    "waitingStatus": "NORMAL",
+    "isDeleted": false,
+    "isClosed": true,
+    "postponedUntil": null,
+    "updatedAt": "2026-02-14T11:31:45.245Z",
+    "automationStatus": "USUNIĘCIE USZKODZENIA",
+    "repairDescription": "test",
+    "subTt": "Nie znaleziono"
+  },
+  {
+    "id": 1771068494175,
+    "zgNumber": "ZG/OPL/2026/02/123",
+    "subject": "ZG test",
+    "body": "Tresc testowa ZG/OPL/2026/02/123",
+    "sender": "test@vlan.local",
+    "folder": "inbox",
+    "waitingStatus": "NORMAL",
+    "isDeleted": false,
+    "isClosed": false,
+    "postponedUntil": null,
+    "updatedAt": "2026-02-14T11:28:14.175Z"
+  }
+]

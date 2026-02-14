@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+  <title id="title">Telekomunikacja — grafika duotone</title>
+  <desc id="desc">Minimalistyczna ilustracja infrastruktury telekomunikacyjnej w dwóch kontrastowych strefach.</desc>
+
+  <defs>
+    <style>
+      .w{fill:#f8fafc}
+      .g{fill:#6b7280}
+      .ws{stroke:#f8fafc}
+      .gs{stroke:#6b7280}
+      .n{fill:none}
+      .sw{stroke-width:8;stroke-linecap:round;stroke-linejoin:round}
+      .sw2{stroke-width:5;stroke-linecap:round;stroke-linejoin:round}
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="600" height="700" class="g"/>
+  <rect x="600" y="0" width="600" height="700" class="w"/>
+
+  <!-- LEFT: white on gray -->
+  <g transform="translate(70 80)">
+    <rect x="30" y="70" width="230" height="420" rx="14" class="n ws sw"/>
+    <rect x="60" y="110" width="170" height="38" rx="6" class="n ws sw2"/>
+    <rect x="60" y="170" width="170" height="38" rx="6" class="n ws sw2"/>
+    <rect x="60" y="230" width="170" height="38" rx="6" class="n ws sw2"/>
+    <circle cx="90" cy="129" r="5" class="w"/>
+    <circle cx="113" cy="129" r="5" class="w"/>
+    <circle cx="136" cy="129" r="5" class="w"/>
+  </g>
+
+  <g transform="translate(340 120)">
+    <circle cx="80" cy="80" r="28" class="n ws sw"/>
+    <path d="M35 80h-30M155 80h30M80 35V5M80 155v30" class="n ws sw"/>
+    <path d="M95 95L210 210" class="n ws sw"/>
+  </g>
+
+  <path d="M130 600 C260 540, 360 560, 470 510 C560 470, 610 500, 700 470" class="n ws sw"/>
+
+  <!-- RIGHT: gray on white -->
+  <g transform="translate(700 90)">
+    <rect x="0" y="90" width="250" height="410" rx="14" class="n gs sw"/>
+    <rect x="35" y="130" width="180" height="38" rx="6" class="n gs sw2"/>
+    <rect x="35" y="190" width="180" height="38" rx="6" class="n gs sw2"/>
+    <rect x="35" y="250" width="180" height="38" rx="6" class="n gs sw2"/>
+    <circle cx="68" cy="149" r="5" class="g"/>
+    <circle cx="91" cy="149" r="5" class="g"/>
+    <circle cx="114" cy="149" r="5" class="g"/>
+  </g>
+
+  <g transform="translate(980 130)">
+    <circle cx="90" cy="90" r="28" class="n gs sw"/>
+    <path d="M45 90H15M165 90h30M90 45V15M90 165v30" class="n gs sw"/>
+    <path d="M72 109L-55 236" class="n gs sw"/>
+  </g>
+
+  <path d="M640 580 C760 545, 850 560, 950 515 C1020 485, 1080 495, 1160 470" class="n gs sw"/>
+</svg>

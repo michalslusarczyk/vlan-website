@@ -1,0 +1,917 @@
+﻿<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <script src="https://cmp.gatekeeperconsent.com/min.js" async data-cfasync="false"></script>
+<script src="https://the.gatekeeperconsent.com/cmp.min.js" async data-cfasync="false"></script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-C2DGWLVV7G"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500
+  });
+  gtag('js', new Date());
+  gtag('config', 'G-C2DGWLVV7G');
+</script>
+<script>
+    window.ezstandalone = window.ezstandalone || {};
+    ezstandalone.cmd = ezstandalone.cmd || [];
+    function runEzoic() {
+        ezstandalone.cmd.push(function() {
+            ezstandalone.define(101, 102, 103, 104, 105, 110);
+            if (!ezstandalone.enabled) {
+                ezstandalone.enable();
+                ezstandalone.display();
+                console.log('Ezoic started.');
+            }
+        });
+    }
+    (function() {
+        var attempts = 0;
+        var maxAttempts = 40;
+
+        var waitForConsent = setInterval(function() {
+            attempts++;
+            if (typeof window.__tcfapi === 'function') {
+                
+                window.__tcfapi('addEventListener', 2, function(tcData, success) {
+                    if (success && (tcData.eventStatus === 'useractioncomplete' || tcData.eventStatus === 'tcloaded')) {
+                        clearInterval(waitForConsent);
+                        runEzoic();
+                        window.__tcfapi('removeEventListener', 2, function(success) {}, tcData.listenerId);
+                    }
+                });
+                clearInterval(waitForConsent); 
+            }
+            if (attempts >= maxAttempts) {
+                clearInterval(waitForConsent);
+                console.log('CMP timeout - starting Ezoic anyway');
+                runEzoic();
+            }
+        }, 100);
+    })();
+</script>
+<script async src="//www.ezojs.com/ezoic/sa.min.js"></script>
+<script defer src="/js/share-system.js?v=1.0"></script>    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>CenaUslug.pl - Porównywarka Cen Usług w Polsce</title>
+    <meta name="description" content="Aktualne średnie ceny usług w Polsce. Sprawdź cenniki remontowe, medyczne i motoryzacyjne. Porównaj koszty i planuj budżet bez niespodzianek.">
+    <meta name="keywords" content="porównywarka cen, ceny usług, usługi w Polsce, sprzątanie, remonty, motoryzacja, zdrowie, uroda">
+    
+    <link rel="canonical" href="https://cenauslug.pl/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://cenauslug.pl/">
+    <meta property="og:title" content="CenaUslug.pl - Baza Cen Usług">
+    <meta property="og:description" content="Sprawdź realne ceny usług w Twoim mieście. Budownictwo, zdrowie, motoryzacja.">
+    <meta property="og:image" content="https://cenauslug.pl/img/logo.svg">
+    <meta property="og:site_name" content="CenaUslug.pl">
+    <meta property="og:locale" content="pl_PL">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/include/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/include/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/include/favicon-16x16.png">
+<link rel="manifest" href="/include/site.webmanifest">
+<link rel="mask-icon" href="/include/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="CenaUslug.pl - Baza Cen Usług">
+    <meta name="twitter:description" content="Sprawdź realne ceny usług w Twoim mieście. Budownictwo, zdrowie, motoryzacja.">
+    <meta name="twitter:image" content="https://cenauslug.pl/img/logo.svg">
+
+    <link rel="preload" href="/img/img_header_mobile.webp" as="image" media="(max-width:768px)">
+    <link rel="preload" href="/img/img_header.webp" as="image" media="(min-width:769px)">
+    <link rel="stylesheet" href="../new_style.css">
+</head>
+<body>
+
+<div class="container">
+    <style>
+    .top-bar-site-header {
+        border-bottom: 1px solid #eee;
+        position: relative;
+        z-index: 1000;
+        width: 100%;
+    }
+    .top-bar-nav-flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 18px 24px;
+        margin: 0 auto;
+        max-width: 1400px;
+        width: 100%;
+    }
+    .top-bar-logo {
+        font-size: 1.5rem;
+        font-weight: 700;
+        text-decoration: none;
+        color: #2c2c2c;
+        z-index: 1001;
+        letter-spacing: -0.5px;
+    }
+    .top-bar-nav-menu {
+        display: flex;
+        gap: 32px;
+    }
+    .top-bar-nav-menu a {
+        position: relative;
+        text-decoration: none;
+        color: #2c2c2c;
+        font-weight: 500;
+        padding: 8px 0;
+        transition: color 0.2s ease;
+    }
+    .top-bar-nav-menu a::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: 0;
+        left: 50%;
+        background-color: var(--primary-50);
+        transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        transform: translateX(-50%);
+        opacity: 0;
+    }
+    .top-bar-nav-menu a:hover {
+        color: var(--primary-50);
+    }
+    .top-bar-nav-menu a:hover::after,
+    .top-bar-nav-menu a.top-bar-active::after {
+        width: 100%;
+        opacity: 1;
+    }
+    .top-bar-nav-menu a.top-bar-active {
+       color: var(--primary-50);
+    }
+    .top-bar-menu-toggle {
+        display: none;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 21px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        z-index: 1001;
+    }
+    .top-bar-menu-toggle span {
+        width: 100%;
+        height: 3px;
+        background-color: #333;
+        border-radius: 3px;
+        transition: none !important;
+    }
+    @media (max-width: 992px) {
+        .top-bar-menu-toggle {
+            display: flex;
+        }
+        .top-bar-nav-menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: #fff;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: none !important;
+            gap: 40px;
+            opacity: 0;
+            visibility: hidden;
+            transform: none !important;
+            pointer-events: none;
+        }
+        .top-bar-nav-menu.top-bar-show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+            pointer-events: all;
+        }
+        .top-bar-menu-toggle.top-bar-active span:nth-child(1) {
+            transform: translateY(9px) rotate(45deg);
+        }
+        .top-bar-menu-toggle.top-bar-active span:nth-child(2) {
+            opacity: 0;
+        }
+        .top-bar-menu-toggle.top-bar-active span:nth-child(3) {
+            transform: translateY(-9px) rotate(-45deg);
+        }
+        body.top-bar-lock-scroll {
+            overflow: hidden;
+        }
+    }
+</style>
+
+<header class="top-bar-site-header">
+    <div class="top-bar-nav-flex">
+        <a href="/" class="top-bar-logo">CenaUslug.pl</a>
+        
+        <button class="top-bar-menu-toggle" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav class="top-bar-nav-menu">
+            <a href="/">Home</a>
+            <a href="/kategorie">Kategorie usług</a>
+            <a href="/nowy-projekt">Twój projekt</a>
+            <a href="/poradniki">Poradniki</a>
+            <a href="/przewodniki_kat">Przewodniki</a>
+            <a href="/kalkulatory">Kalkulatory</a>
+        </nav>
+    </div>
+</header>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.querySelector('.top-bar-menu-toggle');
+    const menu = document.querySelector('.top-bar-nav-menu');
+
+    if (menuToggle && menu) {
+        menuToggle.addEventListener('click', function() {
+            this.classList.toggle('top-bar-active');
+            menu.classList.toggle('top-bar-show');
+            document.body.classList.toggle('top-bar-lock-scroll');
+        });
+
+        const links = menu.querySelectorAll('a');
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                menuToggle.classList.remove('top-bar-active');
+                menu.classList.remove('top-bar-show');
+                document.body.classList.remove('top-bar-lock-scroll');
+            });
+        });
+    }
+
+    const currentPath = window.location.pathname; 
+    const menuLinks = document.querySelectorAll('.top-bar-nav-menu a'); 
+
+    menuLinks.forEach(link => {
+        const linkPath = new URL(link.href, window.location.origin).pathname; 
+
+        if (linkPath === '/') {
+            if (currentPath === linkPath) {
+                link.classList.add('top-bar-active');
+            }
+        } else if (linkPath === '/poradniki') {
+            if (currentPath === '/poradniki' || 
+                currentPath === '/poradniki_kategorie' || 
+                currentPath.startsWith('/poradniki/') || 
+                currentPath.startsWith('/poradniki_kategorie/')) {
+                link.classList.add('top-bar-active');
+            }
+        } else if (linkPath === '/przewodniki_kat') {
+            if (currentPath === '/przewodniki_kat' || currentPath === '/przewodniki' || 
+                currentPath.startsWith('/przewodniki/') || currentPath.startsWith('/przewodnik/')) {
+                link.classList.add('top-bar-active');
+            }
+        } else if (linkPath === '/kalkulatory') {
+            if (currentPath === '/kalkulatory' || currentPath.startsWith('/kalkulatory/')) {
+                link.classList.add('top-bar-active');
+            }
+        } else {
+            if (currentPath === linkPath) {
+                link.classList.add('top-bar-active');
+            }
+        }
+    });
+});
+</script>    <main>
+
+    <header class="home-hero-section">
+        <div class="home-hero-content">
+            <h1 class="home-title">Poznaj realne ceny<br>usług w Twoim mieście</h1>
+            <p class="home-subtitle">Porównuj cenniki, sprawdzaj wykonawców i planuj budżet bez niespodzianek.</p>
+
+            <div class="home-search-wrapper">
+                <img src="/img/icons/search_icon.svg" class="home-search-icon" alt="">
+                <input type="text" class="home-search-input search-bar" placeholder="Np. malowanie ścian, wymiana opon...">
+                <ul class="suggestions-list"></ul>
+            </div>
+
+                        <div class="global-recent-searches" style="margin-bottom: 50px;">
+                <span class="grs-label">Ostatnio szukane:</span>
+                                    <a href="/dom-i-ogrod/ogrod-i-tereny-zewnetrzne/zakladanie-i-pielegnacja-zieleni/wiosenne-porzadki-w-ogrodzie" class="grs-link">Wiosenne porządki w ogrodzie</a><span class="grs-sep">,</span>                                    <a href="/dom-i-ogrod/ogrod-i-tereny-zewnetrzne/zakladanie-i-pielegnacja-zieleni/strzyzenie-zywoplotu" class="grs-link">Strzyżenie żywopłotu</a><span class="grs-sep">,</span>                                    <a href="/dom-i-ogrod/ogrod-i-tereny-zewnetrzne/zakladanie-i-pielegnacja-zieleni/koszenie-trawnika" class="grs-link">Koszenie trawnika</a>                            </div>
+            
+            <div class="hero-stats-row">
+                <div class="stat-pill">
+                    <img src="/img/icons/icon1.svg" alt=""> 
+                    <span><strong>6 683</strong> usług</span>
+                </div>
+                <div class="stat-pill">
+                    <img src="/img/icons/icon2.svg" alt=""> 
+                    <span><strong>23 366</strong> wycen</span>
+                </div>
+                <div class="stat-pill">
+                    <img src="/img/icons/icon4.svg" alt=""> 
+                    <span><strong>883</strong> poradników</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    
+        
+<section class="section-full">
+            <h2 class="section-head-left">Przewodniki tematyczne</h2>
+                        <div class="guides-1plus4-grid">
+                <a href="/przewodniki/budowa-i-remont" class="guide-big-left">
+                    <img src="/img/przewodniki_kat/budowa_i_remont.webp" alt="Cennik usług budowlanych i remontowych 2026 - baza wiedzy" class="guide-tile-img" loading="lazy">
+                    <div class="guide-overlay-gradient">
+                        <h3 class="guide-tile-title">Cennik usług budowlanych i remontowych 2026 - baza wiedzy</h3>
+                    </div>
+                </a>
+
+                <div class="guide-right-wrapper">
+                                        <a href="/przewodniki/motoryzacja" class="guide-small-tile">
+                        <img src="/img/przewodniki_kat/motoryzacja.webp" alt="Ceny napraw samochodów 2026 – pełny cennik usług" class="guide-tile-img" loading="lazy">
+                        <div class="guide-overlay-gradient">
+                            <h4 class="guide-tile-title">Ceny napraw samochodów 2026 – pełny cennik usług</h4>
+                        </div>
+                    </a>
+                                        <a href="/przewodniki/zdrowie-i-uroda" class="guide-small-tile">
+                        <img src="/img/przewodniki_kat/zdrowie_i_uroda.webp" alt="Przewodnik po cenach usług zdrowia i urody 2026" class="guide-tile-img" loading="lazy">
+                        <div class="guide-overlay-gradient">
+                            <h4 class="guide-tile-title">Przewodnik po cenach usług zdrowia i urody 2026</h4>
+                        </div>
+                    </a>
+                                        <a href="/przewodniki/dom-i-ogrod" class="guide-small-tile">
+                        <img src="/img/przewodniki_kat/dom_i_ogrod.webp" alt="Ceny usług domowych i ogrodowych – przewodnik i baza wiedzy" class="guide-tile-img" loading="lazy">
+                        <div class="guide-overlay-gradient">
+                            <h4 class="guide-tile-title">Ceny usług domowych i ogrodowych – przewodnik i baza wiedzy</h4>
+                        </div>
+                    </a>
+                                        <a href="/przewodniki/prawo-i-finanse" class="guide-small-tile">
+                        <img src="/img/przewodniki_kat/prawo_i_finanse.webp" alt="Prawo i finanse" class="guide-tile-img" loading="lazy">
+                        <div class="guide-overlay-gradient">
+                            <h4 class="guide-tile-title">Prawo i finanse</h4>
+                        </div>
+                    </a>
+                                    </div>
+            </div>
+            
+            <div class="guides-btn-wrapper">
+                <a href="/przewodniki" class="btn-action btn-gray">Zobacz więcej</a>
+            </div>
+        </section>
+
+
+        <section class="mb-90 text-center">
+            <p class="section-head-left" style="text-align:center; border:none; margin-bottom:15px;">Co najczęściej szukają inni?</p>
+            <div class="pop-pills-container">
+                                    <a href="/uslugi-dla-zwierzat/usuwanie-kamienia-nazebnego-u-kota" class="pop-pill-btn">
+                        Usuwanie kamienia nazębnego u kota                    </a>
+                                    <a href="/uslugi-dla-zwierzat/ekstrakcja-zeba-u-psa" class="pop-pill-btn">
+                        Ekstrakcja zęba u psa                    </a>
+                                    <a href="/uslugi-dla-zwierzat/echo-serca-u-psa" class="pop-pill-btn">
+                        Echo serca u psa                    </a>
+                                    <a href="/uslugi-dla-zwierzat/kastracja-psa-do-10-kg" class="pop-pill-btn">
+                        Kastracja psa (do 10 kg)                    </a>
+                                    <a href="/uslugi-dla-zwierzat/tomografia-komputerowa-u-psa" class="pop-pill-btn">
+                        Tomografia komputerowa u psa                    </a>
+                                    <a href="/uslugi-dla-zwierzat/kastracja-kota" class="pop-pill-btn">
+                        Kastracja kota                    </a>
+                                    <a href="/uslugi-dla-zwierzat/usuwanie-zebow-z-przetoka-u-psa" class="pop-pill-btn">
+                        Usuwanie zębów z przetoką u psa                    </a>
+                                    <a href="/budowa-i-remont/szpachlowanie-laczen-plyt-g-k" class="pop-pill-btn">
+                        Szpachlowanie łączeń płyt g-k                    </a>
+                            </div>
+        </section>
+
+                <section class="section-full">
+            <h2 class="section-head-left">Ostatnie aktualizacje cen</h2>
+            <div class="services-grid-4">
+                                <a href="/budowa-i-remont/montaz-obrobek-blacharskich" class="srv-tile-big">
+                    <span class="srv-tile-name">Montaż obróbek blacharskich</span>
+                    <span class="srv-tile-price">
+                        od 45 zł 
+                        <small>/ mb</small>
+                    </span>
+                    <span style="font-size:12px; color:#999; margin-top:10px;">
+                        Aktualizacja: wczoraj                    </span>
+                </a>
+                                <a href="/podroze-sport-i-rozrywka/karnet-roczny-na-silownie-platnosc-z-gory" class="srv-tile-big">
+                    <span class="srv-tile-name">Karnet roczny na siłownię (płatność z góry)</span>
+                    <span class="srv-tile-price">
+                        od 1 600 zł 
+                        <small>/ szt</small>
+                    </span>
+                    <span style="font-size:12px; color:#999; margin-top:10px;">
+                        Aktualizacja: wczoraj                    </span>
+                </a>
+                                <a href="/uslugi-dla-zwierzat/konsultacja-specjalistyczna-ptaki-egzotyczne" class="srv-tile-big">
+                    <span class="srv-tile-name">Konsultacja specjalistyczna - ptaki egzotyczne</span>
+                    <span class="srv-tile-price">
+                        od 150 zł 
+                        <small>/ usługa</small>
+                    </span>
+                    <span style="font-size:12px; color:#999; margin-top:10px;">
+                        Aktualizacja: wczoraj                    </span>
+                </a>
+                                <a href="/budowa-i-remont/frezowanie-asfaltu" class="srv-tile-big">
+                    <span class="srv-tile-name">Frezowanie asfaltu</span>
+                    <span class="srv-tile-price">
+                        od 16 zł 
+                        <small>/ m2</small>
+                    </span>
+                    <span style="font-size:12px; color:#999; margin-top:10px;">
+                        Aktualizacja: wczoraj                    </span>
+                </a>
+                            </div>
+        </section>
+        
+                <section class="section-full bg-light-rounded" style="padding: 40px 0;">
+            <h2 class="section-head">Oblicz koszty samodzielnie</h2>
+            <div class="calc-grid-home">
+                                <div class="calc-card-home">
+                                        <img src="/kalkulatory/img/kalkulator-wynagrodzen-brutto-netto.jpg" alt="Kalkulator Wynagrodzeń 2026: Ile na rękę? (brutto netto)" class="calc-img-top" loading="lazy">
+                    
+                    <div class="calc-body-home">
+                        <h3>Kalkulator Wynagrodzeń 2026: Ile na rękę? (brutto netto)</h3>
+                        <p>Sprawdź ile dostaniesz na rękę w 2026 roku. Darmowy kalkulator wynagrodzeń (Umowa o Pracę, Zlecenie, Zerowy PIT) uwzględniający Nowy Ład, składkę zdrowotną, PPK oraz 50% KUP (autorskie).</p>
+                        <a href="/kalkulatory/kalkulator-wynagrodzen-brutto-netto" class="btn-action btn-purple">Oblicz</a>
+                    </div>
+                </div>
+                                <div class="calc-card-home">
+                                        <img src="/kalkulatory/img/kalkulator-zus-jdg-2025.jpg" alt="Kalkulator ZUS 2026 – Składki dla firm (JDG)" class="calc-img-top" loading="lazy">
+                    
+                    <div class="calc-body-home">
+                        <h3>Kalkulator ZUS 2026 – Składki dla firm (JDG)</h3>
+                        <p>Sprawdź ile wyniesie składka ZUS w 2026 roku dla Jednoosobowej Działalności Gospodarczej. Oblicz składkę zdrowotną dla Ryczałtu, Liniówki i Skali oraz ZUS Preferencyjny.</p>
+                        <a href="/kalkulatory/kalkulator-zus-jdg" class="btn-action btn-purple">Oblicz</a>
+                    </div>
+                </div>
+                                <div class="calc-card-home">
+                                        <img src="/kalkulatory/img/kalkulator-kosztow-uzyskania-przychodu.jpg" alt="Kalkulator kosztów uzyskania przychodu (KUP) 2026" class="calc-img-top" loading="lazy">
+                    
+                    <div class="calc-body-home">
+                        <h3>Kalkulator kosztów uzyskania przychodu (KUP) 2026</h3>
+                        <p>Oblicz wysokość kosztów uzyskania przychodu dla umowy o pracę, zlecenia i dzieło. Sprawdź limity dla autorskich kosztów 50% i dowiedz się, ile odliczysz od podatku.</p>
+                        <a href="/kalkulatory/kalkulator-kosztow-uzyskania-przychodu" class="btn-action btn-purple">Oblicz</a>
+                    </div>
+                </div>
+                                <div class="calc-card-home">
+                                        <img src="/kalkulatory/img/kalkulator-form-opodatkowania-b2b.jpg" alt="Porównywarka form opodatkowania B2B – Kalkulator opłacalności 2026" class="calc-img-top" loading="lazy">
+                    
+                    <div class="calc-body-home">
+                        <h3>Porównywarka form opodatkowania B2B – Kalkulator opłacalności 2026</h3>
+                        <p>Zastanawiasz się co wybrać: ryczałt, podatek liniowy czy skalę? Skorzystaj z darmowego kalkulatora B2B. Porównaj zysk netto (&quot;na rękę&quot;) i sprawdź, gdzie zapłacisz najniższe podatki.</p>
+                        <a href="/kalkulatory/kalkulator-form-opodatkowania" class="btn-action btn-purple">Oblicz</a>
+                    </div>
+                </div>
+                            </div>
+            
+            <div style="text-align:center; margin-top:30px;">
+                <a href="/kalkulatory" class="btn-action btn-gray">Zobacz wszystkie kalkulatory</a>
+            </div>
+        </section>
+        
+        <section class="section-full">
+            <h2 class="section-head-left">Najchętniej czytane</h2>
+            <div class="mosaic-3-grid">
+                
+                <a href="/poradniki/ile-kosztuje-wymiana-sondy-lambda-przeglad-cen-i-zalecenia" class="tile-item tile-main">
+                    <div class="top-badge-corner">TOP 1</div>
+                                        <img src="/panel/uploads/671d4261115b1_min.webp" 
+                         srcset="/panel/uploads/750_671d4261115b1_min.webp 750w, /panel/uploads/671d4261115b1_min.webp 1200w"
+                         sizes="(max-width: 768px) 100vw, 800px"
+                         alt="Ile kosztuje wymiana sondy lambda? Cennik robocizny 2026 i koszty całkowite">
+                    <div class="tile-overlay">
+                        <h3>Ile kosztuje wymiana sondy lambda? Cennik robocizny 2026 i koszty całkowite</h3>
+                    </div>
+                </a>
+
+                <a href="/poradniki/wymiana-podswietlenia-w-telewizorze-led-koszt-i-czy-sie-oplaca" class="tile-item">
+                                        <img src="/panel/uploads/682276a07cf77_1747089056.webp" 
+                         srcset="/panel/uploads/750_682276a07cf77_1747089056.webp 750w, /panel/uploads/682276a07cf77_1747089056.webp 1200w"
+                         sizes="(max-width: 768px) 100vw, 500px"
+                         alt="Wymiana podświetlenia w telewizorze LED – koszt i czy się opłaca?">
+                    <div class="tile-overlay">
+                        <h3 style="font-size:20px">Wymiana podświetlenia w telewizorze LED – koszt i czy się opłaca?</h3>
+                    </div>
+                </a>
+
+                <a href="/poradniki/usuniecie-kamienia-nazebnego-u-psa-ile-zaplacisz-u-weterynarza" class="tile-item">
+                                        <img src="/panel/uploads/6852b2abcb322_1750250155.webp" 
+                         srcset="/panel/uploads/750_6852b2abcb322_1750250155.webp 750w, /panel/uploads/6852b2abcb322_1750250155.webp 1200w"
+                         sizes="(max-width: 768px) 100vw, 500px"
+                         alt="Usunięcie kamienia nazębnego u psa – ile zapłacisz u weterynarza?">
+                    <div class="tile-overlay">
+                        <h3 style="font-size:20px">Usunięcie kamienia nazębnego u psa – ile zapłacisz u weterynarza?</h3>
+                    </div>
+                </a>
+
+            </div>
+        </section>
+        
+        
+<section class="facts-section-wrapper">
+    <div class="facts-overlay">
+        
+        <h2 class="facts-title">Czy wiesz, że...</h2>
+
+        <div class="facts-nav">
+                            <a href="#" 
+                   class="btn-fact-pill active" 
+                   data-category="Budowa i remont">
+                   Budowa i remont                </a>
+                            <a href="#" 
+                   class="btn-fact-pill" 
+                   data-category="Dom i ogród">
+                   Dom i ogród                </a>
+                            <a href="#" 
+                   class="btn-fact-pill" 
+                   data-category="Elektronika">
+                   Elektronika                </a>
+                            <a href="#" 
+                   class="btn-fact-pill" 
+                   data-category="Firma i biuro">
+                   Firma i biuro                </a>
+                            <a href="#" 
+                   class="btn-fact-pill" 
+                   data-category="Motoryzacja">
+                   Motoryzacja                </a>
+                            <a href="#" 
+                   class="btn-fact-pill" 
+                   data-category="Uroda">
+                   Uroda                </a>
+                            <a href="#" 
+                   class="btn-fact-pill" 
+                   data-category="Zdrowie">
+                   Zdrowie                </a>
+                    </div>
+
+        <div class="fact-content-box">
+            <p id="ciekawostka" class="fact-text">Ładuję ciekawostkę...</p>
+            
+            <div id="refresh-icon" class="refresh-btn-wrapper" title="Losuj inną ciekawostkę">
+                <img src="/img/icons/rotate_icon.svg" alt="Odśwież">
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const categoryButtons = document.querySelectorAll('.btn-fact-pill');
+    const ciekawostkaElement = document.getElementById('ciekawostka');
+    const refreshIcon = document.getElementById('refresh-icon');
+    
+    // Pobierz aktywną kategorię lub pierwszą z listy
+    let currentCategory = document.querySelector('.btn-fact-pill.active')?.dataset.category || '';
+    let isAnimating = false;
+
+    function setActiveButton(clickedButton) {
+        categoryButtons.forEach(btn => btn.classList.remove('active'));
+        clickedButton.classList.add('active');
+    }
+
+    function loadFact(category = '', isInitialLoad = false) {
+        if (isAnimating) return;
+        isAnimating = true;
+
+        // URL do API (zakładamy, że plik jest w /include/)
+        const fetchData = () => {
+            const uniqueUrl = `/include/get_ciekawostka.php?category=${encodeURIComponent(category)}&cacheBust=${new Date().getTime()}`;
+            return fetch(uniqueUrl)
+                .then(response => {
+                    if (!response.ok) throw new Error('Błąd sieci');
+                    return response.json();
+                });
+        };
+
+        const updateAndAnimate = (data) => {
+            ciekawostkaElement.classList.add('fading'); // Start znikania
+
+            setTimeout(() => {
+                // Zmiana tekstu
+                if (data && data.tresc_ciekawostki) {
+                    ciekawostkaElement.textContent = data.tresc_ciekawostki;
+                } else {
+                    ciekawostkaElement.textContent = 'Brak ciekawostek dla tej kategorii.';
+                }
+                
+                ciekawostkaElement.classList.remove('fading'); // Start pojawiania
+
+                setTimeout(() => { isAnimating = false; }, 300);
+            }, 300); // Czekamy tyle, ile trwa transition w CSS (0.3s)
+        };
+        
+        if (isInitialLoad) {
+            fetchData()
+                .then(data => {
+                    if (data && data.tresc_ciekawostki) {
+                        ciekawostkaElement.textContent = data.tresc_ciekawostki;
+                    }
+                })
+                .catch(err => {
+                    console.error(err);
+                    ciekawostkaElement.textContent = "Wybierz kategorię, aby zobaczyć ciekawostkę.";
+                })
+                .finally(() => { isAnimating = false; });
+        } else {
+            fetchData()
+                .then(updateAndAnimate)
+                .catch(error => {
+                    console.error("Błąd: ", error);
+                    isAnimating = false;
+                });
+        }
+    }
+
+    // Inicjalizacja
+    if (currentCategory) {
+        loadFact(currentCategory, true);
+    }
+
+    // Obsługa kliknięć w kategorie
+    categoryButtons.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            // Jeśli kliknięto w już aktywną, nie przeładowuj całej logiki, ewentualnie tylko refresh
+            if (btn.classList.contains('active')) return;
+            
+            currentCategory = btn.dataset.category;
+            setActiveButton(btn);
+            loadFact(currentCategory); // Tu ładujemy nową kategorię, więc animacja jest wskazana
+        });
+    });
+
+    // Obsługa przycisku odświeżania
+    if (refreshIcon) {
+        refreshIcon.addEventListener('click', () => {
+            loadFact(currentCategory);
+        });
+    }
+});
+</script>
+
+                <section class="section-full">
+            <h2 class="section-head" style="margin-bottom:30px;">Ostatnio dodane wyceny</h2>
+            <div class="valuations-home-list">
+                                <a href="/budowa-i-remont/montaz-obrobek-blacharskich" class="valuation-row-home">
+                    <div>
+                        <div style="font-weight:600; color:var(--primary-80); font-size:17px;">Montaż obróbek blacharskich</div>
+                        <div class="val-meta">
+                            <span style="display:flex; align-items:center; gap:4px;">
+                                <img src="/img/icons/location-pin.svg" width="14" height="14" alt="" style="opacity:0.6"> 
+                                Kielce                            </span>
+                            <span style="display:flex; align-items:center; gap:4px;">
+                                <img src="/img/icons/icon_date.svg" width="14" height="14" alt="" style="opacity:0.6">
+                                wczoraj                            </span>
+                        </div>
+                    </div>
+                    <div class="val-price">
+                        47 zł
+                    </div>
+                </a>
+                                <a href="/podroze-sport-i-rozrywka/karnet-roczny-na-silownie-platnosc-z-gory" class="valuation-row-home">
+                    <div>
+                        <div style="font-weight:600; color:var(--primary-80); font-size:17px;">Karnet roczny na siłownię (płatność z góry)</div>
+                        <div class="val-meta">
+                            <span style="display:flex; align-items:center; gap:4px;">
+                                <img src="/img/icons/location-pin.svg" width="14" height="14" alt="" style="opacity:0.6"> 
+                                Bydgoszcz                            </span>
+                            <span style="display:flex; align-items:center; gap:4px;">
+                                <img src="/img/icons/icon_date.svg" width="14" height="14" alt="" style="opacity:0.6">
+                                wczoraj                            </span>
+                        </div>
+                    </div>
+                    <div class="val-price">
+                        1 800 zł
+                    </div>
+                </a>
+                                <a href="/uslugi-dla-zwierzat/konsultacja-specjalistyczna-ptaki-egzotyczne" class="valuation-row-home">
+                    <div>
+                        <div style="font-weight:600; color:var(--primary-80); font-size:17px;">Konsultacja specjalistyczna - ptaki egzotyczne</div>
+                        <div class="val-meta">
+                            <span style="display:flex; align-items:center; gap:4px;">
+                                <img src="/img/icons/location-pin.svg" width="14" height="14" alt="" style="opacity:0.6"> 
+                                Gliwice                            </span>
+                            <span style="display:flex; align-items:center; gap:4px;">
+                                <img src="/img/icons/icon_date.svg" width="14" height="14" alt="" style="opacity:0.6">
+                                wczoraj                            </span>
+                        </div>
+                    </div>
+                    <div class="val-price">
+                        170 zł
+                    </div>
+                </a>
+                                <a href="/budowa-i-remont/frezowanie-asfaltu" class="valuation-row-home">
+                    <div>
+                        <div style="font-weight:600; color:var(--primary-80); font-size:17px;">Frezowanie asfaltu</div>
+                        <div class="val-meta">
+                            <span style="display:flex; align-items:center; gap:4px;">
+                                <img src="/img/icons/location-pin.svg" width="14" height="14" alt="" style="opacity:0.6"> 
+                                Szczecin                            </span>
+                            <span style="display:flex; align-items:center; gap:4px;">
+                                <img src="/img/icons/icon_date.svg" width="14" height="14" alt="" style="opacity:0.6">
+                                wczoraj                            </span>
+                        </div>
+                    </div>
+                    <div class="val-price">
+                        20 zł
+                    </div>
+                </a>
+                            </div>
+        </section>
+        
+                <section class="section-full">
+            <div style="display:flex; justify-content:space-between; align-items:end; margin-bottom:30px;">
+                <h2 class="section-head-left" style="margin:0;">Świeża wiedza</h2>
+                <a href="/poradniki" class="read-more">Wszystkie poradniki &rarr;</a>
+            </div>
+            <div class="articles-grid-4">
+                                <a href="/poradniki/od-czego-zalezy-cena-za-wymiane-termostatu-i-jakie-sa-objawy" class="guide-card-simple">
+                    <div class="guide-img-wrapper">
+                                                <img src="/panel/uploads/698b36c270229_1770731202.webp" 
+                             srcset="/panel/uploads/750_698b36c270229_1770731202.webp 750w, /panel/uploads/698b36c270229_1770731202.webp 1200w"
+                             sizes="(max-width: 768px) 100vw, 400px"
+                             alt="Od czego zależy cena za wymianę termostatu w 2026 roku i jakie są objawy?" loading="lazy">
+                    </div>
+                    <div class="guide-content">
+                        <span class="guide-date">10.02.2026</span>
+                        <h4>Od czego zależy cena za wymianę termostatu w 2026 roku i jakie są objawy?</h4>
+                    </div>
+                </a>
+                                <a href="/poradniki/jak-bezpiecznie-uzytkowac-samochod-z-chiptuningiem-stage-2" class="guide-card-simple">
+                    <div class="guide-img-wrapper">
+                                                <img src="/panel/uploads/698454efc1ef6_1770280175.webp" 
+                             srcset="/panel/uploads/750_698454efc1ef6_1770280175.webp 750w, /panel/uploads/698454efc1ef6_1770280175.webp 1200w"
+                             sizes="(max-width: 768px) 100vw, 400px"
+                             alt="Jak bezpiecznie użytkować samochód z Chiptuningiem Stage 2?" loading="lazy">
+                    </div>
+                    <div class="guide-content">
+                        <span class="guide-date">05.02.2026</span>
+                        <h4>Jak bezpiecznie użytkować samochód z Chiptuningiem Stage 2?</h4>
+                    </div>
+                </a>
+                                <a href="/poradniki/od-czego-zalezy-cena-chiptuningu-stage-2-analiza-wydatkow" class="guide-card-simple">
+                    <div class="guide-img-wrapper">
+                                                <img src="/panel/uploads/698454df85572_1770280159.webp" 
+                             srcset="/panel/uploads/750_698454df85572_1770280159.webp 750w, /panel/uploads/698454df85572_1770280159.webp 1200w"
+                             sizes="(max-width: 768px) 100vw, 400px"
+                             alt="Od czego zależy cena Chiptuningu Stage 2? Analiza wydatków 2026" loading="lazy">
+                    </div>
+                    <div class="guide-content">
+                        <span class="guide-date">05.02.2026</span>
+                        <h4>Od czego zależy cena Chiptuningu Stage 2? Analiza wydatków 2026</h4>
+                    </div>
+                </a>
+                                <a href="/poradniki/wplyw-chiptuningu-stage-1-na-trwalosc-podzespolow-samochodu" class="guide-card-simple">
+                    <div class="guide-img-wrapper">
+                                                <img src="/panel/uploads/6984533f28f14_1770279743.webp" 
+                             srcset="/panel/uploads/750_6984533f28f14_1770279743.webp 750w, /panel/uploads/6984533f28f14_1770279743.webp 1200w"
+                             sizes="(max-width: 768px) 100vw, 400px"
+                             alt="Wpływ chiptuningu Stage 1 na trwałość podzespołów samochodu" loading="lazy">
+                    </div>
+                    <div class="guide-content">
+                        <span class="guide-date">05.02.2026</span>
+                        <h4>Wpływ chiptuningu Stage 1 na trwałość podzespołów samochodu</h4>
+                    </div>
+                </a>
+                                <a href="/poradniki/chiptuning-stage-1-dla-poczatkujacych-kompletny-poradnik" class="guide-card-simple">
+                    <div class="guide-img-wrapper">
+                                                <img src="/panel/uploads/6984532f12945_1770279727.webp" 
+                             srcset="/panel/uploads/750_6984532f12945_1770279727.webp 750w, /panel/uploads/6984532f12945_1770279727.webp 1200w"
+                             sizes="(max-width: 768px) 100vw, 400px"
+                             alt="Chiptuning Stage 1 dla początkujących: kompletny poradnik 2026" loading="lazy">
+                    </div>
+                    <div class="guide-content">
+                        <span class="guide-date">05.02.2026</span>
+                        <h4>Chiptuning Stage 1 dla początkujących: kompletny poradnik 2026</h4>
+                    </div>
+                </a>
+                                <a href="/poradniki/bledy-przy-wynajmie-koparki-z-operatorem-ktore-opoznia-budowe" class="guide-card-simple">
+                    <div class="guide-img-wrapper">
+                                                <img src="/panel/uploads/69837de105fbb_1770225121.webp" 
+                             srcset="/panel/uploads/750_69837de105fbb_1770225121.webp 750w, /panel/uploads/69837de105fbb_1770225121.webp 1200w"
+                             sizes="(max-width: 768px) 100vw, 400px"
+                             alt="Błędy przy wynajmie koparki z operatorem, które opóźnią budowę" loading="lazy">
+                    </div>
+                    <div class="guide-content">
+                        <span class="guide-date">04.02.2026</span>
+                        <h4>Błędy przy wynajmie koparki z operatorem, które opóźnią budowę</h4>
+                    </div>
+                </a>
+                                <a href="/poradniki/jak-przygotowac-sie-na-wynajem-koparki-z-operatorem" class="guide-card-simple">
+                    <div class="guide-img-wrapper">
+                                                <img src="/panel/uploads/69837dd01c066_1770225104.webp" 
+                             srcset="/panel/uploads/750_69837dd01c066_1770225104.webp 750w, /panel/uploads/69837dd01c066_1770225104.webp 1200w"
+                             sizes="(max-width: 768px) 100vw, 400px"
+                             alt="Jak przygotować się na wynajem koparki z operatorem w 2026?" loading="lazy">
+                    </div>
+                    <div class="guide-content">
+                        <span class="guide-date">04.02.2026</span>
+                        <h4>Jak przygotować się na wynajem koparki z operatorem w 2026?</h4>
+                    </div>
+                </a>
+                                <a href="/poradniki/ile-dni-zajmuje-profesjonalny-montaz-domku-letniskowego" class="guide-card-simple">
+                    <div class="guide-img-wrapper">
+                                                <img src="/panel/uploads/69837a32d0536_1770224178.webp" 
+                             srcset="/panel/uploads/750_69837a32d0536_1770224178.webp 750w, /panel/uploads/69837a32d0536_1770224178.webp 1200w"
+                             sizes="(max-width: 768px) 100vw, 400px"
+                             alt="Ile dni zajmuje profesjonalny montaż domku letniskowego?" loading="lazy">
+                    </div>
+                    <div class="guide-content">
+                        <span class="guide-date">04.02.2026</span>
+                        <h4>Ile dni zajmuje profesjonalny montaż domku letniskowego?</h4>
+                    </div>
+                </a>
+                            </div>
+        </section>
+        
+        <div id="ezoic-pub-ad-placeholder-104"></div>
+
+        <section class="mb-90" style="background:var(--primary-10); border-radius:var(--radius-lg); padding:50px; text-align:center;">
+            <h2 style="font-size:28px;">CenaUslug.pl – Twoje źródło wiedzy</h2>
+            <p style="max-width:800px; margin:0 auto; font-size:16px;">
+                Nasza misja to transparentność. Pomagamy Ci podejmować świadome decyzje finansowe, udostępniając aktualne cenniki usług z całej Polski. Dołącz do społeczności i nie przepłacaj.
+            </p>
+        </section>
+
+    </main>
+
+    <style>
+    .footer-links { display: flex; flex-direction: column; gap: 14px; }
+.footer-links a { text-decoration: none; color: var(--text-light); transition: all 0.3s ease; opacity: 0.8; font-weight: 400; }
+.footer-links a:hover { color: #000; opacity: 1; transform: translateX(4px); }
+.footer-brand { text-decoration: none; color: inherit; display: inline-block; }
+.footer-copyright { text-align: center; margin-top: 70px; padding-top: 30px; border-top: 1px solid rgba(0,0,0,0.05); opacity: 0.6; font-size: 13px; }
+.site-footer { border-top: 1px solid #eee; padding: 60px 0; margin-top: 100px; color: var(--text-light); font-size: 15px; }
+.footer-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 40px; }
+</style>
+<footer class="site-footer">
+    <div class="footer-grid">
+        <div>
+            <a href="https://cenauslug.pl/" class="footer-brand">
+                <h3>CenaUslug.pl</h3>
+            </a>
+            <p style="margin-top: 15px; opacity: 0.8;">Niezależny portal z cennikami usług w całej Polsce.</p>
+        </div>
+
+        <div>
+            <h4 style="margin-bottom: 20px;">Nawigacja</h4>
+            <div class="footer-links">
+                <a href="https://cenauslug.pl/">Strona główna</a>
+                <a href="https://cenauslug.pl/kategorie">Wszystkie kategorie</a>
+                <a href="https://cenauslug.pl/nowy-projekt">Stwórz własny projekt</a>
+                <a href="https://cenauslug.pl/o_nas">O nas</a>
+            </div>
+        </div>
+
+        <div>
+            <h4 style="margin-bottom: 20px;">Informacje</h4>
+            <div class="footer-links">
+                <a href="https://cenauslug.pl/kontakt">Kontakt</a>
+                <a href="https://cenauslug.pl/polityka">Polityka prywatności</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-copyright">
+        2024-2026 <b>CenaUslug.pl</b> &bull; Wszelkie prawa zastrzeżone.
+    </div>
+</footer></div>
+
+<script src="/js/search_suggestions.js"></script>
+<script src="/js/common.js"></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "CenaUslug.pl",
+  "alternateName": "Cena Usług",
+  "url": "https://cenauslug.pl/",
+  "description": "Baza aktualnych cen usług w Polsce. Sprawdź cenniki remontowe, motoryzacyjne i medyczne. Porównaj koszty i planuj budżet.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "CenaUslug.pl",
+    "url": "https://cenauslug.pl",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://cenauslug.pl/img/logo.svg",
+      "width": 180,
+      "height": 60
+    }
+  },
+  "inLanguage": "pl-PL"
+}
+</script>
+</body>
+</html>

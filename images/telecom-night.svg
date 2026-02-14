@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+  <title id="title">Telekomunikacja — tryb nocny</title>
+  <desc id="desc">Biały rysunek infrastruktury telekomunikacyjnej na transparentnym tle.</desc>
+  <defs>
+    <style>
+      .ws{stroke:#f8fafc}
+      .n{fill:none}
+      .sw{stroke-width:8;stroke-linecap:round;stroke-linejoin:round}
+      .sw2{stroke-width:5;stroke-linecap:round;stroke-linejoin:round}
+      .w{fill:#f8fafc}
+    </style>
+  </defs>
+
+  <g transform="translate(120 95)">
+    <rect x="30" y="70" width="260" height="450" rx="14" class="n ws sw"/>
+    <rect x="66" y="115" width="188" height="40" rx="6" class="n ws sw2"/>
+    <rect x="66" y="178" width="188" height="40" rx="6" class="n ws sw2"/>
+    <rect x="66" y="241" width="188" height="40" rx="6" class="n ws sw2"/>
+    <circle cx="96" cy="135" r="5" class="w"/>
+    <circle cx="119" cy="135" r="5" class="w"/>
+    <circle cx="142" cy="135" r="5" class="w"/>
+  </g>
+
+  <g transform="translate(500 140)">
+    <g class="wand-move">
+      <animateTransform attributeName="transform" type="translate" dur="5.4s" repeatCount="indefinite"
+        keyTimes="0;0.20;0.42;0.62;0.74;0.84;1"
+        values="0 0; -2 -1; 1 0; -2 1; -58 -22; -58 -22; 0 0" />
+      <g class="wand-rotate">
+        <animateTransform attributeName="transform" type="rotate" dur="5.4s" repeatCount="indefinite"
+          keyTimes="0;0.20;0.42;0.62;0.74;0.84;1"
+          values="-6 245 246; 5 245 246; -9 245 246; 7 245 246; -13 245 246; -13 245 246; -6 245 246" />
+        <g id="wand-rigid" data-locked="true" aria-label="Różdżka jako jeden sztywny element">
+          <circle cx="92" cy="92" r="30" class="n ws sw"/>
+          <path d="M42 92H10M172 92h32M92 42V10M92 172v32" class="n ws sw"/>
+          <path d="M110 110L245 246" class="n ws sw"/>
+        </g>
+      </g>
+    </g>
+  </g>
+
+  <g class="left-rain" aria-hidden="true">
+    <circle class="w" cx="245" cy="40" r="2" opacity="0">
+      <animate attributeName="cy" dur="5.4s" repeatCount="indefinite" keyTimes="0;0.70;0.74;0.90;1" values="40;40;62;232;40"/>
+      <animate attributeName="opacity" dur="5.4s" repeatCount="indefinite" keyTimes="0;0.70;0.74;0.90;1" values="0;0;0.9;0;0"/>
+    </circle>
+    <circle class="w" cx="274" cy="28" r="2" opacity="0">
+      <animate attributeName="cy" begin="0.08s" dur="5.4s" repeatCount="indefinite" keyTimes="0;0.70;0.74;0.90;1" values="28;28;56;220;28"/>
+      <animate attributeName="opacity" begin="0.08s" dur="5.4s" repeatCount="indefinite" keyTimes="0;0.70;0.74;0.90;1" values="0;0;0.85;0;0"/>
+    </circle>
+    <circle class="w" cx="306" cy="34" r="2" opacity="0">
+      <animate attributeName="cy" begin="0.14s" dur="5.4s" repeatCount="indefinite" keyTimes="0;0.70;0.74;0.90;1" values="34;34;68;240;34"/>
+      <animate attributeName="opacity" begin="0.14s" dur="5.4s" repeatCount="indefinite" keyTimes="0;0.70;0.74;0.90;1" values="0;0;0.85;0;0"/>
+    </circle>
+    <circle class="w" cx="338" cy="24" r="2" opacity="0">
+      <animate attributeName="cy" begin="0.2s" dur="5.4s" repeatCount="indefinite" keyTimes="0;0.70;0.74;0.90;1" values="24;24;54;214;24"/>
+      <animate attributeName="opacity" begin="0.2s" dur="5.4s" repeatCount="indefinite" keyTimes="0;0.70;0.74;0.90;1" values="0;0;0.85;0;0"/>
+    </circle>
+  </g>
+
+  <path d="M120 610 C290 540, 430 565, 560 520 C700 472, 820 504, 1080 450" class="n ws sw"/>
+</svg>

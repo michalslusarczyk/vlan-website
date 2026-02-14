@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1771068705245,
+    "type": "PERFORM_FULL_AUTOMATION",
+    "monterEmailId": 1771068705206,
+    "targetZgNumber": "ZG/OPL/2026/02/991",
+    "parserResult": {
+      "targetZgNumber": "ZG/OPL/2026/02/991",
+      "selectedStatus": "USUNIĘCIE USZKODZENIA",
+      "repairDescription": "test"
+    },
+    "affectedEmailIds": [
+      1771068705206
+    ],
+    "createdAt": "2026-02-14T11:31:45.245Z"
+  }
+]
